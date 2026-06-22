@@ -24,6 +24,7 @@ const stats = [
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [agreed, setAgreed] = useState(false);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -279,7 +280,7 @@ const Index = () => {
 
                 <div className="mt-9 space-y-4">
                   {[
-                    { icon: 'Phone', label: '+7 (495) 123-45-67', sub: 'Звонки по будням 9:00–20:00' },
+                    { icon: 'Phone', label: '+7 (495) 150-03-66', sub: 'Звонки по будням 9:00–20:00' },
                     { icon: 'Mail', label: 'hello@firstplace.group', sub: 'Ответим в течение часа' },
                     { icon: 'MapPin', label: 'Москва, Сити, башня «Федерация»', sub: 'Работаем по всей России' },
                   ].map((c) => (
@@ -319,6 +320,8 @@ const Index = () => {
                 <label className="flex items-start gap-3 cursor-pointer group">
                   <input
                     type="checkbox"
+                    checked={agreed}
+                    onChange={(e) => setAgreed(e.target.checked)}
                     className="mt-0.5 w-4 h-4 shrink-0 accent-orange cursor-pointer"
                   />
                   <span className="text-sm text-muted-foreground leading-relaxed">
@@ -336,8 +339,9 @@ const Index = () => {
                 </label>
                 <Button
                   type="submit"
+                  disabled={!agreed}
                   size="lg"
-                  className="w-full font-display uppercase tracking-wide text-base h-14 bg-orange text-white hover:bg-orange-soft shadow-[0_8px_30px_-8px_hsl(var(--orange))]"
+                  className="w-full font-display uppercase tracking-wide text-base h-14 bg-orange text-white hover:bg-orange-soft shadow-[0_8px_30px_-8px_hsl(var(--orange))] disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none"
                 >
                   Получить бесплатный аудит
                 </Button>
