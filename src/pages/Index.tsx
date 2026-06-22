@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import Calculator from '@/components/Calculator';
-import HeroChart from '@/components/HeroChart';
 import { cases, plans } from '@/data/content';
 
 const HERO_BG =
@@ -83,9 +82,8 @@ const Index = () => {
       {/* Hero */}
       <section id="hero" className="relative min-h-screen flex items-center pt-24 pb-16 px-4 hero-dark text-white">
         <div className="absolute inset-0 overflow-hidden">
-          <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-45" />
+          <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-45 animate-hero-pan" />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(240_30%_6%)]/40 via-[hsl(240_30%_6%)]/75 to-background" />
-          <HeroChart />
         </div>
 
         <div className="container max-w-7xl relative">

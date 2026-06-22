@@ -109,6 +109,12 @@ export default {
 				'marquee': {
 					from: { transform: 'translateX(0)' },
 					to: { transform: 'translateX(-50%)' }
+				},
+				'hero-pan': {
+					'0%':   { transform: 'scale(1.0) translateX(0%) translateY(0%)' },
+					'33%':  { transform: 'scale(1.08) translateX(-2%) translateY(-1%)' },
+					'66%':  { transform: 'scale(1.12) translateX(2%) translateY(-3%)' },
+					'100%': { transform: 'scale(1.0) translateX(0%) translateY(0%)' },
 				}
 			},
 			animation: {
@@ -119,7 +125,8 @@ export default {
 				'gradient-move': 'gradient-move 6s ease infinite',
 				'float': 'float 6s ease-in-out infinite',
 				'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
-				'marquee': 'marquee 30s linear infinite'
+				'marquee': 'marquee 30s linear infinite',
+				'hero-pan': 'hero-pan 18s ease-in-out infinite'
 			}
 		}
 	},
