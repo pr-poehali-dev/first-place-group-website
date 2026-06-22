@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import Calculator from '@/components/Calculator';
-import HeroParticles from '@/components/HeroParticles';
 import { cases, plans } from '@/data/content';
 
 const HERO_BG =
@@ -85,7 +84,6 @@ const Index = () => {
         <div className="absolute inset-0 overflow-hidden">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-45" />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(240_30%_6%)]/40 via-[hsl(240_30%_6%)]/75 to-background" />
-          <HeroParticles />
         </div>
 
         <div className="container max-w-7xl relative">
@@ -199,12 +197,12 @@ const Index = () => {
       <Calculator />
 
       {/* Pricing */}
-      <section id="pricing" className="py-24 px-4">
+      <section id="pricing" className="py-24 px-4 bg-muted/40">
         <div className="container max-w-7xl">
           <div className="text-center mb-16">
-            <span className="text-primary font-display uppercase tracking-[0.3em] text-sm">Тарифы</span>
+            <span className="text-orange font-display uppercase tracking-[0.3em] text-sm">Тарифы</span>
             <h2 className="font-display text-4xl md:text-6xl font-bold mt-3 uppercase">
-              Планы <span className="text-gradient-anim">продвижения</span>
+              Планы <span className="text-orange">продвижения</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
               Гибкие тарифы под любой бюджет и задачу. Можно изменить состав услуг под ваш проект.
@@ -217,8 +215,8 @@ const Index = () => {
                 key={p.name}
                 className={`relative rounded-3xl p-8 border flex flex-col ${
                   p.highlighted
-                    ? 'bg-gradient-to-br from-[hsl(240_30%_8%)] to-[hsl(245_35%_14%)] text-white border-orange/40 scale-[1.03] shadow-[0_30px_80px_-28px_hsl(var(--orange))]'
-                    : 'bg-card border-border shadow-sm'
+                    ? 'bg-white border-orange/50 scale-[1.03] shadow-[0_20px_60px_-20px_hsl(var(--orange)/0.4)]'
+                    : 'bg-white border-border shadow-sm'
                 }`}
               >
                 {p.badge && (
@@ -226,19 +224,19 @@ const Index = () => {
                     {p.badge}
                   </span>
                 )}
-                <p className="font-display text-2xl font-bold uppercase">{p.name}</p>
-                <p className={`text-sm mt-1 mb-6 ${p.highlighted ? 'text-white/60' : 'text-muted-foreground'}`}>{p.tagline}</p>
+                <p className="font-display text-2xl font-bold uppercase text-foreground">{p.name}</p>
+                <p className="text-sm mt-1 mb-6 text-muted-foreground">{p.tagline}</p>
                 <div className="mb-6">
-                  <span className={`font-display text-5xl font-bold ${p.highlighted ? 'text-orange' : ''}`}>
+                  <span className={`font-display text-5xl font-bold ${p.highlighted ? 'text-orange' : 'text-foreground'}`}>
                     {p.price}
                   </span>
-                  <span className={`ml-1 ${p.highlighted ? 'text-white/60' : 'text-muted-foreground'}`}>{p.period}</span>
+                  <span className="ml-1 text-muted-foreground">{p.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8 flex-1">
                   {p.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm">
                       <Icon name="Check" size={17} className="text-orange mt-0.5 shrink-0" />
-                      <span className={p.highlighted ? 'text-white/80' : 'text-muted-foreground'}>{f}</span>
+                      <span className="text-muted-foreground">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -260,19 +258,19 @@ const Index = () => {
       </section>
 
       {/* Contacts */}
-      <section id="contacts" className="py-24 px-4 bg-muted/50">
+      <section id="contacts" className="py-24 px-4 bg-white">
         <div className="container max-w-6xl">
-          <div className="rounded-[2rem] p-8 md:p-14 overflow-hidden relative bg-gradient-to-br from-[hsl(240_30%_8%)] to-[hsl(245_35%_13%)] text-white border border-orange/30 shadow-[0_40px_100px_-40px_hsl(var(--orange))]">
-            <div className="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-orange/30 blur-3xl animate-glow-pulse" />
-            <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-orange/40 blur-3xl animate-glow-pulse" />
+          <div className="rounded-[2rem] p-8 md:p-14 overflow-hidden relative bg-[hsl(220_33%_97%)] border border-border shadow-sm">
+            <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-orange/10 blur-3xl" />
+            <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-primary/8 blur-3xl" />
 
             <div className="grid lg:grid-cols-2 gap-12 relative">
               <div>
                 <span className="text-orange font-display uppercase tracking-[0.3em] text-sm">Контакты</span>
-                <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 uppercase leading-tight">
+                <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 uppercase leading-tight text-foreground">
                   Обсудим ваш <span className="text-orange">проект?</span>
                 </h2>
-                <p className="text-white/70 mt-5 max-w-md">
+                <p className="text-muted-foreground mt-5 max-w-md">
                   Оставьте заявку — проведём бесплатный аудит сайта и подготовим стратегию роста в течение 3 дней.
                 </p>
 
@@ -283,12 +281,12 @@ const Index = () => {
                     { icon: 'MapPin', label: 'Москва, Сити, башня «Федерация»', sub: 'Работаем по всей России' },
                   ].map((c) => (
                     <div key={c.label} className="flex items-center gap-4">
-                      <div className="w-11 h-11 rounded-xl bg-orange/20 border border-orange/30 flex items-center justify-center shrink-0">
+                      <div className="w-11 h-11 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center shrink-0">
                         <Icon name={c.icon} size={20} className="text-orange" />
                       </div>
                       <div>
-                        <p className="font-medium">{c.label}</p>
-                        <p className="text-sm text-white/60">{c.sub}</p>
+                        <p className="font-medium text-foreground">{c.label}</p>
+                        <p className="text-sm text-muted-foreground">{c.sub}</p>
                       </div>
                     </div>
                   ))}
@@ -299,30 +297,30 @@ const Index = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <input
                     placeholder="Ваше имя"
-                    className="w-full h-13 px-4 py-3.5 rounded-xl bg-white/5 border border-white/15 text-white placeholder:text-white/40 focus:border-orange outline-none transition-colors"
+                    className="w-full h-13 px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors"
                   />
                   <input
                     placeholder="Телефон"
-                    className="w-full h-13 px-4 py-3.5 rounded-xl bg-white/5 border border-white/15 text-white placeholder:text-white/40 focus:border-orange outline-none transition-colors"
+                    className="w-full h-13 px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors"
                   />
                 </div>
                 <input
                   placeholder="Сайт или ниша"
-                  className="w-full h-13 px-4 py-3.5 rounded-xl bg-white/5 border border-white/15 text-white placeholder:text-white/40 focus:border-orange outline-none transition-colors"
+                  className="w-full h-13 px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors"
                 />
                 <textarea
                   placeholder="Кратко о задаче"
                   rows={4}
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/15 text-white placeholder:text-white/40 focus:border-orange outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors resize-none"
                 />
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full font-display uppercase tracking-wide text-base h-14 bg-orange text-white hover:bg-orange-soft shadow-[0_10px_40px_-8px_hsl(var(--orange))]"
+                  className="w-full font-display uppercase tracking-wide text-base h-14 bg-orange text-white hover:bg-orange-soft shadow-[0_8px_30px_-8px_hsl(var(--orange))]"
                 >
                   Получить бесплатный аудит
                 </Button>
-                <p className="text-xs text-white/50 text-center">
+                <p className="text-xs text-muted-foreground text-center">
                   Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.
                 </p>
               </form>
@@ -332,15 +330,15 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[hsl(240_30%_7%)] text-white py-10 px-4 border-t-4 border-orange">
+      <footer className="bg-muted/60 border-t border-border py-10 px-4">
         <div className="container max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-orange flex items-center justify-center font-display font-bold text-white text-sm">
               1
             </div>
-            <span className="font-display font-bold tracking-wide">FIRST PLACE GROUP</span>
+            <span className="font-display font-bold tracking-wide text-foreground">FIRST PLACE GROUP</span>
           </div>
-          <p className="text-sm text-white/60">© 2026 Фёрст Плейс Групп. SEO и Digital маркетинг.</p>
+          <p className="text-sm text-muted-foreground">© 2026 Фёрст Плейс Групп. SEO и Digital маркетинг.</p>
         </div>
       </footer>
     </div>
