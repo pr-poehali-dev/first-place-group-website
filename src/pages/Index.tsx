@@ -280,16 +280,23 @@ const Index = () => {
 
                 <div className="mt-9 space-y-4">
                   {[
-                    { icon: 'Phone', label: '+7 (495) 150-03-66', sub: 'Звонки по будням 9:00–20:00' },
-                    { icon: 'Mail', label: 'hello@firstplace.group', sub: 'Ответим в течение часа' },
-                    { icon: 'MapPin', label: 'Москва, Сити, башня «Федерация»', sub: 'Работаем по всей России' },
+                    { icon: 'Phone', label: '+7 (495) 150-03-66', sub: 'Звонки по будням 9:00–20:00', href: 'tel:+74951500366' },
+                    { icon: 'Mail', label: 'alex500leb@yandex.ru', sub: 'Ответим в течение часа', href: 'mailto:alex500leb@yandex.ru' },
+                    { icon: 'Send', label: '@lavskij', sub: 'Написать в Telegram', href: 'https://t.me/lavskij' },
+                    { icon: 'MapPin', label: 'Москва, Сити, башня «Федерация»', sub: 'Работаем по всей России', href: null },
                   ].map((c) => (
                     <div key={c.label} className="flex items-center gap-4">
                       <div className="w-11 h-11 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center shrink-0">
                         <Icon name={c.icon} size={20} className="text-orange" />
                       </div>
                       <div>
-                        <p className="font-medium text-foreground">{c.label}</p>
+                        {c.href ? (
+                          <a href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="font-medium text-foreground hover:text-orange transition-colors">
+                            {c.label}
+                          </a>
+                        ) : (
+                          <p className="font-medium text-foreground">{c.label}</p>
+                        )}
                         <p className="text-sm text-muted-foreground">{c.sub}</p>
                       </div>
                     </div>
