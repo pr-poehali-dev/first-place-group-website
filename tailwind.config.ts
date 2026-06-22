@@ -110,11 +110,28 @@ export default {
 					from: { transform: 'translateX(0)' },
 					to: { transform: 'translateX(-50%)' }
 				},
-				'hero-pan': {
-					'0%':   { transform: 'scale(1.0) translateX(0%) translateY(0%)' },
-					'33%':  { transform: 'scale(1.08) translateX(-2%) translateY(-1%)' },
-					'66%':  { transform: 'scale(1.12) translateX(2%) translateY(-3%)' },
-					'100%': { transform: 'scale(1.0) translateX(0%) translateY(0%)' },
+				'hero-reveal': {
+					'0%': {
+						clipPath: 'polygon(0% 100%, 8% 100%, 16% 100%, 25% 100%, 33% 100%, 41% 100%, 50% 100%, 58% 100%, 66% 100%, 75% 100%, 83% 100%, 91% 100%, 100% 100%, 100% 100%, 0% 100%)'
+					},
+					'20%': {
+						clipPath: 'polygon(0% 100%, 8% 88%, 16% 92%, 25% 78%, 33% 85%, 41% 70%, 50% 80%, 58% 65%, 66% 75%, 75% 60%, 83% 70%, 91% 55%, 100% 65%, 100% 100%, 0% 100%)'
+					},
+					'40%': {
+						clipPath: 'polygon(0% 100%, 8% 75%, 16% 82%, 25% 60%, 33% 70%, 41% 48%, 50% 62%, 58% 40%, 66% 55%, 75% 32%, 83% 48%, 91% 25%, 100% 40%, 100% 100%, 0% 100%)'
+					},
+					'60%': {
+						clipPath: 'polygon(0% 100%, 8% 65%, 16% 72%, 25% 45%, 33% 58%, 41% 30%, 50% 45%, 58% 18%, 66% 35%, 75% 10%, 83% 28%, 91% 5%, 100% 20%, 100% 100%, 0% 100%)'
+					},
+					'75%': {
+						clipPath: 'polygon(0% 100%, 8% 60%, 16% 68%, 25% 38%, 33% 52%, 41% 22%, 50% 38%, 58% 8%, 66% 25%, 75% 2%, 83% 18%, 91% 0%, 100% 10%, 100% 100%, 0% 100%)'
+					},
+					'88%': {
+						clipPath: 'polygon(0% 100%, 8% 60%, 16% 68%, 25% 38%, 33% 52%, 41% 22%, 50% 38%, 58% 8%, 66% 25%, 75% 2%, 83% 18%, 91% 0%, 100% 10%, 100% 100%, 0% 100%)'
+					},
+					'100%': {
+						clipPath: 'polygon(0% 100%, 8% 100%, 16% 100%, 25% 100%, 33% 100%, 41% 100%, 50% 100%, 58% 100%, 66% 100%, 75% 100%, 83% 100%, 91% 100%, 100% 100%, 100% 100%, 0% 100%)'
+					},
 				}
 			},
 			animation: {
@@ -126,7 +143,7 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
 				'marquee': 'marquee 30s linear infinite',
-				'hero-pan': 'hero-pan 18s ease-in-out infinite'
+				'hero-reveal': 'hero-reveal 6s cubic-bezier(0.4, 0, 0.2, 1) infinite'
 			}
 		}
 	},
