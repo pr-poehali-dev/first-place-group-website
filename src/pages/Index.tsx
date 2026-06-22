@@ -181,8 +181,8 @@ const Index = () => {
                     {c.industry}
                   </span>
                 </div>
-                <p className="font-display text-4xl font-bold text-gradient">{c.metric}</p>
-                <p className="text-sm text-muted-foreground mt-1">{c.result}</p>
+                <p className="font-display text-6xl font-bold leading-none text-gradient drop-shadow-sm">{c.metric}</p>
+                <p className="text-sm text-muted-foreground mt-2">{c.result}</p>
                 <div className="border-t border-border/60 mt-5 pt-4 flex items-center justify-between">
                   <p className="font-medium text-sm">{c.client}</p>
                   <span className="text-xs text-muted-foreground shrink-0 ml-2">{c.period}</span>
