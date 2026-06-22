@@ -316,6 +316,24 @@ const Index = () => {
                   rows={4}
                   className="w-full px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors resize-none"
                 />
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    className="mt-0.5 w-4 h-4 shrink-0 accent-orange cursor-pointer"
+                  />
+                  <span className="text-sm text-muted-foreground leading-relaxed">
+                    Я согласен(а) с{' '}
+                    <a
+                      href="/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange underline underline-offset-4 hover:text-orange-soft transition-colors"
+                    >
+                      политикой конфиденциальности
+                    </a>{' '}
+                    и даю согласие на обработку персональных данных
+                  </span>
+                </label>
                 <Button
                   type="submit"
                   size="lg"
@@ -323,9 +341,6 @@ const Index = () => {
                 >
                   Получить бесплатный аудит
                 </Button>
-                <p className="text-xs text-muted-foreground text-center">
-                  Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.
-                </p>
               </form>
             </div>
           </div>
