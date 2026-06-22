@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import Calculator from '@/components/Calculator';
+import HeroParticles from '@/components/HeroParticles';
 import { cases, plans } from '@/data/content';
 
 const HERO_BG =
@@ -84,6 +85,7 @@ const Index = () => {
         <div className="absolute inset-0 overflow-hidden">
           <img src={HERO_BG} alt="" className="w-full h-full object-cover opacity-45" />
           <div className="absolute inset-0 bg-gradient-to-b from-[hsl(240_30%_6%)]/40 via-[hsl(240_30%_6%)]/75 to-background" />
+          <HeroParticles />
         </div>
 
         <div className="container max-w-7xl relative">
