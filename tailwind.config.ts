@@ -26,6 +26,8 @@ export default {
 				electric: 'hsl(var(--electric))',
 				violet: 'hsl(var(--violet-glow))',
 				magenta: 'hsl(var(--magenta-glow))',
+				orange: 'hsl(var(--orange))',
+				'orange-soft': 'hsl(var(--orange-soft))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

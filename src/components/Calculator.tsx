@@ -191,7 +191,7 @@ const Calculator = () => {
               </ul>
               <Button
                 size="lg"
-                className="w-full font-display uppercase tracking-wide text-base bg-gradient-to-r from-primary via-secondary to-accent text-white hover:opacity-90 transition-opacity h-13 py-6"
+                className="w-full font-display uppercase tracking-wide text-base bg-orange text-white hover:bg-orange-soft transition-colors h-13 py-6 shadow-[0_10px_40px_-8px_hsl(var(--orange))]"
               >
                 Получить точный расчёт
               </Button>
