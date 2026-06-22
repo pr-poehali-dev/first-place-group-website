@@ -341,7 +341,17 @@ const Index = () => {
             </div>
             <span className="font-display font-bold tracking-wide text-foreground">FIRST PLACE GROUP</span>
           </div>
-          <p className="text-sm text-muted-foreground">© 2026 Фёрст Плейс Групп. SEO и Digital маркетинг.</p>
+          <div className="flex items-center gap-4">
+            <p className="text-sm text-muted-foreground">© 2026 Фёрст Плейс Групп. SEO и Digital маркетинг.</p>
+            <a
+              href="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-foreground underline underline-offset-4 transition-colors whitespace-nowrap"
+            >
+              Политика конфиденциальности
+            </a>
+          </div>
         </div>
       </footer>
     </div>
