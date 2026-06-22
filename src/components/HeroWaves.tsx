@@ -64,17 +64,19 @@ const HeroWaves = () => {
     const drawWave = (wave: Wave) => {
       const w = canvas.offsetWidth;
       const h = canvas.offsetHeight;
-      const y0 = h * wave.yBase;
+      // слева yBase (низко), справа yBase - tilt (высоко)
+      const tilt = h * 0.32;
 
       ctx.beginPath();
-      ctx.moveTo(0, y0);
 
       for (let x = 0; x <= w; x += 2) {
+        const progress = x / w;
+        const y0 = h * wave.yBase - tilt * progress;
         const y =
           y0 +
           Math.sin(x * wave.frequency + t * wave.speed + wave.offset) * wave.amplitude +
           Math.sin(x * wave.frequency * 1.7 + t * wave.speed * 0.6 + wave.offset + 1) * wave.amplitude * 0.35;
-        ctx.lineTo(x, y);
+        if (x === 0) { ctx.moveTo(x, y); } else { ctx.lineTo(x, y); }
       }
 
       ctx.strokeStyle = wave.color;
