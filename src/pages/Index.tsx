@@ -172,7 +172,8 @@ const Index = () => {
             {cases.map((c, i) => (
               <div
                 key={c.client}
-                className="group bg-card rounded-2xl p-6 border border-border hover-lift cursor-default shadow-sm"
+                onClick={() => scrollTo('contacts')}
+                className="group bg-card rounded-2xl p-6 border border-border hover-lift cursor-pointer shadow-sm"
                 style={{ animationDelay: `${i * 0.03}s` }}
               >
                 <div className="flex items-center justify-between mb-5">
