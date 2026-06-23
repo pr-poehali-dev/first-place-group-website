@@ -8,7 +8,7 @@ const Privacy = () => {
         <section className="mb-8">
           <h2 className="font-display text-xl font-semibold mb-3">1. Общие положения</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Настоящая Политика конфиденциальности (далее — «Политика») определяет порядок обработки и защиты персональных данных физических лиц (далее — «Пользователи»), которые используют сайт и сервисы ООО «Фёрст Плейс Групп» (далее — «Оператор»).
+            Настоящая Политика конфиденциальности (далее — «Политика») определяет порядок обработки и защиты персональных данных физических лиц (далее — «Пользователи»), которые используют сайт и сервисы ИП Жихарев А.С. (далее — «Оператор»).
           </p>
           <p className="text-muted-foreground leading-relaxed mt-3">
             Политика разработана в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных», а также иными применимыми нормативными правовыми актами Российской Федерации.
@@ -19,7 +19,9 @@ const Privacy = () => {
           <h2 className="font-display text-xl font-semibold mb-3">2. Оператор персональных данных</h2>
           <p className="text-muted-foreground leading-relaxed">
             Оператором персональных данных является:<br />
-            <strong className="text-foreground">ООО «Фёрст Плейс Групп»</strong><br />
+            <strong className="text-foreground">ИП Жихарев А.С.</strong><br />
+            ОГРНИП: 316619600189924<br />
+            ИНН: 616405779815<br />
             Деятельность: SEO и Digital маркетинг.<br />
             Контактный e-mail: <span className="text-primary">info@firstplacegroup.ru</span>
           </p>
