@@ -23,7 +23,7 @@ const Privacy = () => {
             ОГРНИП: 316619600189924<br />
             ИНН: 616405779815<br />
             Деятельность: SEO и Digital маркетинг.<br />
-            Контактный e-mail: <span className="text-primary">info@firstplacegroup.ru</span>
+            Контактный e-mail: <span className="text-primary">alex500leb@yandex.ru</span>
           </p>
         </section>
 
@@ -107,7 +107,7 @@ const Privacy = () => {
           <h2 className="font-display text-xl font-semibold mb-3">11. Контактная информация</h2>
           <p className="text-muted-foreground leading-relaxed">
             По всем вопросам, связанным с обработкой персональных данных, обращайтесь:<br />
-            E-mail: <span className="text-primary">info@firstplacegroup.ru</span>
+            E-mail: <span className="text-primary">alex500leb@yandex.ru</span>
           </p>
         </section>
 
