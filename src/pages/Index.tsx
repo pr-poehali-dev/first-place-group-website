@@ -306,12 +306,12 @@ const Index = () => {
 
               <div className="relative rounded-2xl overflow-hidden h-full min-h-[380px]">
                 <img
-                  src="https://cdn.poehali.dev/projects/a028d389-49b8-49a1-9092-639f7a3d594c/files/98a5c7b2-f0eb-45c6-84d0-49c8ffa2f59d.jpg"
-                  alt="Наш офис в башне Федерация"
+                  src="https://cdn.poehali.dev/projects/a028d389-49b8-49a1-9092-639f7a3d594c/files/8eecf2b4-e5cd-40e1-b932-1217775a76d3.jpg"
+                  alt="Коворкинг в башне Федерация"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <p className="absolute bottom-5 left-5 text-white text-sm font-medium">Наш офис, башня «Федерация», Москва</p>
+                <p className="absolute bottom-5 left-5 text-white text-sm font-medium">Встречаемся с клиентами в коворкинге, башня «Федерация»</p>
               </div>
             </div>
           </div>
