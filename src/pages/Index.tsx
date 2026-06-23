@@ -24,7 +24,7 @@ const stats = [
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [agreed, setAgreed] = useState(false);
+
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -304,55 +304,15 @@ const Index = () => {
                 </div>
               </div>
 
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    placeholder="Ваше имя"
-                    className="w-full h-13 px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors"
-                  />
-                  <input
-                    placeholder="Телефон"
-                    className="w-full h-13 px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors"
-                  />
-                </div>
-                <input
-                  placeholder="Сайт или ниша"
-                  className="w-full h-13 px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors"
+              <div className="relative rounded-2xl overflow-hidden h-full min-h-[380px]">
+                <img
+                  src="https://cdn.poehali.dev/projects/a028d389-49b8-49a1-9092-639f7a3d594c/files/98a5c7b2-f0eb-45c6-84d0-49c8ffa2f59d.jpg"
+                  alt="Наш офис в башне Федерация"
+                  className="w-full h-full object-cover"
                 />
-                <textarea
-                  placeholder="Кратко о задаче"
-                  rows={4}
-                  className="w-full px-4 py-3.5 rounded-xl bg-white border border-border text-foreground placeholder:text-muted-foreground focus:border-orange outline-none transition-colors resize-none"
-                />
-                <label className="flex items-start gap-3 cursor-pointer group">
-                  <input
-                    type="checkbox"
-                    checked={agreed}
-                    onChange={(e) => setAgreed(e.target.checked)}
-                    className="mt-0.5 w-4 h-4 shrink-0 accent-orange cursor-pointer"
-                  />
-                  <span className="text-sm text-muted-foreground leading-relaxed">
-                    Я согласен(а) с{' '}
-                    <a
-                      href="/privacy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-orange underline underline-offset-4 hover:text-orange-soft transition-colors"
-                    >
-                      политикой конфиденциальности
-                    </a>{' '}
-                    и даю согласие на обработку персональных данных
-                  </span>
-                </label>
-                <Button
-                  type="submit"
-                  disabled={!agreed}
-                  size="lg"
-                  className="w-full font-display uppercase tracking-wide text-base h-14 bg-orange text-white hover:bg-orange-soft shadow-[0_8px_30px_-8px_hsl(var(--orange))] disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none"
-                >
-                  Получить бесплатный аудит
-                </Button>
-              </form>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <p className="absolute bottom-5 left-5 text-white text-sm font-medium">Наш офис, башня «Федерация», Москва</p>
+              </div>
             </div>
           </div>
         </div>
