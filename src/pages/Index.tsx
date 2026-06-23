@@ -306,7 +306,7 @@ const Index = () => {
 
               <div className="relative rounded-2xl overflow-hidden h-full min-h-[380px]">
                 <img
-                  src="https://cdn.poehali.dev/projects/a028d389-49b8-49a1-9092-639f7a3d594c/files/8eecf2b4-e5cd-40e1-b932-1217775a76d3.jpg"
+                  src="https://cdn.poehali.dev/projects/a028d389-49b8-49a1-9092-639f7a3d594c/files/c3737399-24f8-4e15-b619-441678ebbcad.jpg"
                   alt="Коворкинг в башне Федерация"
                   className="w-full h-full object-cover"
                 />
