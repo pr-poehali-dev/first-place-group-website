@@ -22,7 +22,7 @@ const Privacy = () => {
             <strong className="text-foreground">ИП Жихарев А.С.</strong><br />
             ОГРНИП: 316619600189924<br />
             ИНН: 616405779815<br />
-            Деятельность: SEO и Digital маркетинг.<br />
+            Деятельность рекламных агентств.<br />
             Контактный e-mail: <span className="text-primary">alex500leb@yandex.ru</span>
           </p>
         </section>
